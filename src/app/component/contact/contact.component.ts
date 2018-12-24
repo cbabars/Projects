@@ -1,0 +1,37 @@
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css']
+})
+export class ContactComponent implements OnInit {
+  modalRef: BsModalRef;
+  registerForm: FormGroup;
+  submitted = false;
+  constructor(private modalService: BsModalService, private formBuilder: FormBuilder) { }
+
+  ngOnInit() {
+    this.registerForm = this.formBuilder.group({
+      Name: [null, Validators.required],
+      mobileNumber: [null, Validators.pattern(/^[6-9]\d{9}$/)],
+      Email: [null, [Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')]],
+      Message: [null, Validators.maxLength(200)]
+    });
+  }
+
+  get f() { return this.registerForm.controls; }
+
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
+  }
+
+  onSubmit() {
+    this.submitted = true;
+    alert('SUCCESS!! :-)' + this.registerForm.value)
+  }
+
+}

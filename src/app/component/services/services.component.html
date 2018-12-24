@@ -1,0 +1,314 @@
+<div class="col-12 container">
+  <div class="text-center mb-4">
+    <h3 class="text-primary">Services</h3>
+  </div>
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top" src="assets/background_image/first_card.jpeg" alt="Card image cap">
+      <div class="card-body">
+        <div class="text-center">
+          <h5 class="card-title">DIPLOMA IN AUTOCAD 2D & 3D</h5>
+        </div>
+        <p class="card-text">Improve your website ranking in Google results for keywords that matter in the digital marketing world</p>
+        <div class="text-center">
+          <button type="button" (click)="openModal(template)" class="btn btn-primary">Enquire Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="assets/background_image/second_cards.jpeg" alt="Card image cap">
+      <div class="card-body">
+        <div class="text-center">
+          <h5 class="card-title">DIPLOMA IN CIVIL 2D & 3D</h5>
+        </div>
+        <p class="card-text">It covers layout of all kinds. interior design and facility planing and gives you total layout designing</p>
+        <div class="text-center">
+          <button type="button" (click)="openModal(template)" class="btn btn-primary">Enquire Now</button>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="card">
+        <img class="card-img-top" src="https://dummyimage.com/600x400/000/fff" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div> -->
+  </div>
+</div>
+
+<ng-template #template>
+  <div class="modal-header bg-primary text-white">
+    <h5 class="modal-title pull-left">Send Enquiry</h5>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="text-center mb-2">
+      <b>For Which Of These Do You Require Training</b>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="3DAnimation">
+          <label class="form-check-label" for="3DAnimation">3D Animation</label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="GraphicDesign">
+          <label class="form-check-label" for="GraphicDesign">Graphic Design</label>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="CorelDRAW">
+          <label class="form-check-label" for="CorelDRAW">CorelDRAW</label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="A&VEditing">
+          <label class="form-check-label" for="A&VEditing">Audio & Video Editing</label>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="VisualEffects">
+          <label class="form-check-label" for="VisualEffects">Visual Effects(VFX)</label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="3DStudio">
+          <label class="form-check-label" for="3DStudio">3D Studio Max</label>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="DTP">
+          <label class="form-check-label" for="DTP">DTP</label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="Autodesk">
+          <label class="form-check-label" for="Autodesk">Autodesk MAYA</label>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="3DModelling">
+          <label class="form-check-label" for="3DModelling">3D Modelling</label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="3DPriinter">
+          <label class="form-check-label" for="3DPriinter">3D Priinter</label>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="Other">
+          <label class="form-check-label" for="Other">Other</label>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mb-2">
+      <b>Which Mode Of Training Do You Prefer?</b>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Training">Online
+          </label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Training">Classroom
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mb-2">
+      <b>For Whom Do You Require The Training?</b>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Type">Individual
+          </label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Type">Organisation
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="text-center m-2">
+      <b>For Which Of These Timings Do You Prefer?</b>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Timings">No Preference
+          </label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Timings">Weekdays(Morning)
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Timings">Weekdays(Evening)
+          </label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Timings">Weekends
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="text-center m-2">
+      <b>What Are You Looking For?</b>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="Checking">Diploma In AUTOCAD: 2D & 3D
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="Checking">Diploma In 3D MAX 3D STUDIO MAX
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="Checking">Diploma In REVIT Architecture
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="Checking">Diploma In REVIT-MEP
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="Checking">Other
+        </label>
+      </div>
+    </div>
+    <div class="text-center">
+      <button type="button" (click)="modalRef.hide()" (click)="openModal(register)" class="btn btn-primary">Next</button>
+    </div>
+  </div>
+</ng-template>
+
+
+<ng-template #register>
+  <div class="modal-header bg-primary text-white">
+    <span class="mr-2" title="back" (click)="modalRef.hide()" (click)="openModal(template)">
+      <i class="fa fa-arrow-left"></i>
+    </span>
+    <h5 class="modal-title pull-left">Send Enquiry</h5>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form-container">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="Name">Name *</label>
+          <input placeholder="Enter name" [ngClass]="{ 'error': submitted && f.Name.errors }" formControlName="Name" type="text" class="form-control"
+            id="Name" required>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group">
+          <label for="mobileNo">Mobile Number *</label>
+          <input placeholder="Enter mobile" [ngClass]="{ 'error': submitted && f.mobileNumber.errors }" formControlName="mobileNumber"
+          maxlength="10" type="number" class="form-control" id="mobileNo" required>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input placeholder="Enter email" [ngClass]="{ 'error': submitted && f.Email.errors }" formControlName="Email" type="email"
+            class="form-control" id="email" required>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-group">
+          <label for="comment">Message:</label>
+          <textarea title="{{(submitted && f.Message.errors) ? 'Max 200 charactor allowd': '' }}" [ngClass]="{ 'error': submitted && f.Message.errors }"
+            class="form-control" formControlName="Message" placeholder="Type message.."></textarea>
+        </div>
+      </div>
+      <div class="text-center">
+        <button [disabled]="registerForm.invalid" type="submit" (click)="modalRef.hide()" (click)="openModal(Save)" class="btn btn-primary">Continue</button>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+<ng-template #Save>
+  <div class="modal-header bg-primary text-white">
+    <h5 class="modal-title pull-left">Enquiry Delivered</h5>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="text-center mb-2">
+      <i class="fa fa-envelope-open-o fa-3x" aria-hidden="true"></i>
+    </div>
+    <div class="text-center">
+      <p>Your enquiry has been delivered to us,
+        <br> we will get back to you shortly</p>
+    </div>
+    <div class="text-center">
+      <button type="button" (click)="modalRef.hide()" class="btn btn-primary">Continue</button>
+    </div>
+  </div>
+</ng-template>

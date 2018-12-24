@@ -1,0 +1,73 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNav">
+  <a class="navbar-collapse" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.453372169195!2d73.82843800007768!3d18.50840347431597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf64a34c7849%3A0x97e7c60434e984e7!2sCADD+Ventures!5e0!3m2!1sen!2sin!4v1545129340200" target="_blank">
+    <i class="fa fa-map-marker navbar-brand mr-0" aria-hidden="true"> <span> At Nal Stop</span> </i></a>
+  <a class="navbar-collapse" href="tel:+917841041220">
+    <i class="fa fa-phone navbar-brand mr-0"> <span> +91-7841041220</span> </i></a>
+  <div class="container">
+    <img style="height: 40px; width: 40px;" src="assets/background_image/cv-logo.png">
+    <a class="ml-1 navbar-brand" href="javascript:void(0)">Cadd Ventures</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white" (click)="scroll(home)" href="javascript:void(0)">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" (click)="scroll(services)" href="javascript:void(0)">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" (click)="scroll(about)" href="javascript:void(0)">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" (click)="scroll(gallery)" href="javascript:void(0)">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" (click)="scroll(contact)" href="javascript:void(0)">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header #home class="text-white">
+  <app-home></app-home>
+</header>
+
+<section #services>
+  <app-services></app-services>
+</section>
+
+<section #about>
+  <app-about></app-about>
+</section>
+
+<section #gallery>
+  <app-gallery></app-gallery>
+</section>
+
+<section #contact>
+  <app-contact></app-contact>
+</section>
+
+<!-- Footer -->
+<section>
+  <footer class="py-4 bg-primary">
+    <div class="col">
+      <a class="m-0 text-white" (click)="scroll(home)" href="javascript:void(0)">Home | </a>
+      <a class="m-0 text-white" (click)="scroll(services)" href="javascript:void(0)">Services | </a>
+      <a class="m-0 text-white" (click)="scroll(about)" href="javascript:void(0)">About Us | </a>
+      <a class="m-0 text-white" (click)="scroll(gallery)" href="javascript:void(0)">Gallery | </a>
+      <a class="m-0 text-white" (click)="scroll(contact)" href="javascript:void(0)">Contact Us</a>
+    </div>
+    <div class="col">
+      <p class="m-0 text-center text-white">&copy; Copyright 2018-2019.cadd.ventures All Rights Reserved.</p>
+    </div>
+  </footer>
+</section>
+
+ <a class="contact-button" href="tel:+917841041220"> <i class="fa fa-headphones phoneSetting" style="color: white;"></i> <div class="text-left" style="margin: 5px 0px 5px 60px;">Contact Us <br> <a title="Call Now" href="tel:+917841041220">+91 7841041220</a> </div></a>
+ <a title="Whatsapp" href="https://api.whatsapp.com/send?phone=917841041220&forceIntent=true&load=loadInIOSExternalSafari" target="_blank" class="whatsup-button"><i class="fa fa-whatsapp fa-3x"></i></a>
