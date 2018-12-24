@@ -29,10 +29,8 @@ export class ServicesComponent implements OnInit {
     this.modalRef = this.modalService.show(template);
   }
 
-  
   onSubmit() {
     this.submitted = true;
-    alert('SUCCESS!! :-)' + this.registerForm.value)
   }
 
 }

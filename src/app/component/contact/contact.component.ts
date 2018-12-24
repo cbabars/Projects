@@ -31,7 +31,6 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    alert('SUCCESS!! :-)' + this.registerForm.value)
   }
 
 }
