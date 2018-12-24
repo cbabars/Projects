@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent implements OnInit {
+  @ViewChild('SavePopup') SavePopup: any;
   modalRef: BsModalRef;
   registerForm: FormGroup;
   submitted = false;
@@ -31,6 +32,7 @@ export class ServicesComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
+    this.modalRef = this.modalService.show(this.SavePopup);
   }
 
 }

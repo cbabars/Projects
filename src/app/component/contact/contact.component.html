@@ -73,7 +73,7 @@
           </div>
         </div>
         <div class="text-center mb-3">
-          <button [disabled]="registerForm.invalid" type="submit" (click)="openModal(Save)" class="btn btn-primary">Continue</button>
+          <button [disabled]="registerForm.invalid" type="submit" class="btn btn-primary">Submit</button>
         </div>
       </form>
     </div>
@@ -86,7 +86,7 @@
   </div>
 </div>
 
-<ng-template #Save>
+<ng-template #SavePopup>
     <div class="modal-header bg-primary text-white">
       <h5 class="modal-title pull-left">Enquiry Delivered</h5>
       <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
