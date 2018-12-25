@@ -4,26 +4,26 @@
   </div>
   <div class="card-deck">
     <div class="card">
-      <img class="card-img-top" src="assets/background_image/first_card.jpeg" alt="Card image cap">
+      <img class="card-img-top" src="assets/background_image/second_card.jpeg" alt="Card image cap">
       <div class="card-body">
         <div class="text-center">
-          <h5 class="card-title">DIPLOMA IN AUTOCAD 2D & 3D</h5>
+          <h5 class="card-title">MECHANICAL</h5>
         </div>
         <p class="card-text">Improve your website ranking in Google results for keywords that matter in the digital marketing world</p>
         <div class="text-center">
-          <button type="button" (click)="openModal(template)" class="btn btn-primary">Enquire Now</button>
+          <button type="button" (click)="openModal(mechanical)" class="btn btn-primary">Enquire Now</button>
         </div>
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="assets/background_image/second_cards.jpeg" alt="Card image cap">
+      <img class="card-img-top" src="assets/background_image/first_card.jpeg" alt="Card image cap">
       <div class="card-body">
         <div class="text-center">
-          <h5 class="card-title">DIPLOMA IN CIVIL 2D & 3D</h5>
+          <h5 class="card-title">CIVIL</h5>
         </div>
         <p class="card-text">It covers layout of all kinds. interior design and facility planing and gives you total layout designing</p>
         <div class="text-center">
-          <button type="button" (click)="openModal(template)" class="btn btn-primary">Enquire Now</button>
+          <button type="button" (click)="openModal(civil)" class="btn btn-primary">Enquire Now</button>
         </div>
       </div>
     </div>
@@ -38,7 +38,7 @@
   </div>
 </div>
 
-<ng-template #template>
+<ng-template #mechanical>
   <div class="modal-header bg-primary text-white">
     <h5 class="modal-title pull-left">Send Enquiry</h5>
     <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
@@ -52,78 +52,28 @@
     <div class="row">
       <div class="col-6">
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="3DAnimation">
-          <label class="form-check-label" for="3DAnimation">3D Animation</label>
+          <input type="checkbox" class="form-check-input" id="mechanicalCADCAMCAE">
+          <label class="form-check-label" for="mechanicalCADCAMCAE">Mechanical CAD / CAM/ CAE</label>
         </div>
       </div>
       <div class="col-6">
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="GraphicDesign">
-          <label class="form-check-label" for="GraphicDesign">Graphic Design</label>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-2">
-      <div class="col-6">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="CorelDRAW">
-          <label class="form-check-label" for="CorelDRAW">CorelDRAW</label>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="A&VEditing">
-          <label class="form-check-label" for="A&VEditing">Audio & Video Editing</label>
+          <input type="checkbox" class="form-check-input" id="Production&QualityControl">
+          <label class="form-check-label" for="Production&QualityControl">Production & Quality Control</label>
         </div>
       </div>
     </div>
     <div class="row mt-2">
       <div class="col-6">
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="VisualEffects">
-          <label class="form-check-label" for="VisualEffects">Visual Effects(VFX)</label>
+          <input type="checkbox" class="form-check-input" id="ProfessionalinMachineDesign">
+          <label class="form-check-label" for="ProfessionalinMachineDesign">Professional in Machine Design</label>
         </div>
       </div>
       <div class="col-6">
         <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="3DStudio">
-          <label class="form-check-label" for="3DStudio">3D Studio Max</label>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-2">
-      <div class="col-6">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="DTP">
-          <label class="form-check-label" for="DTP">DTP</label>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="Autodesk">
-          <label class="form-check-label" for="Autodesk">Autodesk MAYA</label>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-2">
-      <div class="col-6">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="3DModelling">
-          <label class="form-check-label" for="3DModelling">3D Modelling</label>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="3DPriinter">
-          <label class="form-check-label" for="3DPriinter">3D Priinter</label>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-2">
-      <div class="col-6">
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="Other">
-          <label class="form-check-label" for="Other">Other</label>
+          <input type="checkbox" class="form-check-input" id="ProjectManagement_mechanical">
+          <label class="form-check-label" for="ProjectManagement_mechanical">Project Management</label>
         </div>
       </div>
     </div>
@@ -206,28 +156,184 @@
     <div class="col-12">
       <div class="form-check">
         <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="Checking">Diploma In AUTOCAD: 2D & 3D
+          <input type="radio" class="form-check-input" name="Checking">Mechanical CAD / CAM / CAE
         </label>
       </div>
     </div>
     <div class="col-12">
       <div class="form-check">
         <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="Checking">Diploma In 3D MAX 3D STUDIO MAX
+          <input type="radio" class="form-check-input" name="Checking">Production & Quality Control
         </label>
       </div>
     </div>
     <div class="col-12">
       <div class="form-check">
         <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="Checking">Diploma In REVIT Architecture
+          <input type="radio" class="form-check-input" name="Checking">Professional in Machine Design
         </label>
       </div>
     </div>
     <div class="col-12">
       <div class="form-check">
         <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="Checking">Diploma In REVIT-MEP
+          <input type="radio" class="form-check-input" name="Checking">Project Management
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="Checking">Other
+        </label>
+      </div>
+    </div>
+    <div class="text-center">
+      <button type="button" (click)="modalRef.hide()" (click)="openModal(register)" class="btn btn-primary">Next</button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #civil>
+  <div class="modal-header bg-primary text-white">
+    <h5 class="modal-title pull-left">Send Enquiry</h5>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="text-center mb-2">
+      <b>For Which Of These Do You Require Training</b>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="CivilCADCAMCAE">
+          <label class="form-check-label" for="CivilCADCAMCAE">Civil CAD /  CAM / CAE</label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="BuildingInformationModeling">
+          <label class="form-check-label" for="BuildingInformationModeling">Building Information Modeling(BIM)</label>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="StructuralAnalysisDesign">
+          <label class="form-check-label" for="StructuralAnalysisDesign">Structural Analysis & Design</label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="ProjectManagement_civil">
+          <label class="form-check-label" for="ProjectManagement_civil">Project Management</label>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mb-2">
+      <b>Which Mode Of Training Do You Prefer?</b>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Training">Online
+          </label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Training">Classroom
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mb-2">
+      <b>For Whom Do You Require The Training?</b>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Type">Individual
+          </label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Type">Organisation
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="text-center m-2">
+      <b>For Which Of These Timings Do You Prefer?</b>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Timings">No Preference
+          </label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Timings">Weekdays(Morning)
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Timings">Weekdays(Evening)
+          </label>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="Timings">Weekends
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="text-center m-2">
+      <b>What Are You Looking For?</b>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="Checking">Civil CAD / CAM / CAE
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="Checking">Building Information Modeling(BIM)
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="Checking">Structural Analysis & Design
+          </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="Checking">Project Management
         </label>
       </div>
     </div>
