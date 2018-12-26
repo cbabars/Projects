@@ -1,13 +1,13 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'Exception.php';
 require 'PHPMailer.php';
 require 'SMTP.php';
+require 'Autoloader.php';
 
 $errors = array();  	// array to hold validation errors
 $data = array(); 		// array to pass back data
@@ -29,10 +29,10 @@ $data = array(); 		// array to pass back data
 		$data['errors']  = $errors;
 		
 	} else {
-		$mail = new PHPMailer(); // create a new object
+		$mail = new PHPMailer(true); // create a new object
 		$mail->IsSMTP(); // enable SMTP
 		$mail->SMTPAuth = true; // authentication enabled
-		// $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for GMail
+		$mail->SMTPSecure = true; // secure transfer enabled REQUIRED for GMail
 		$mail->Host = "localhost";
 		$mail->Port = 25; // or 587
 		$mail->IsHTML(true);
