@@ -2,6 +2,7 @@ import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmailsenderService } from '../../services/emailsender.service'
 
 @Component({
   selector: 'app-services',
@@ -13,7 +14,9 @@ export class ServicesComponent implements OnInit {
   modalRef: BsModalRef;
   registerForm: FormGroup;
   submitted = false;
-  constructor(private modalService: BsModalService, private formBuilder: FormBuilder) { }
+  constructor(private modalService: BsModalService,
+              private formBuilder: FormBuilder,
+              private emailsenderService: EmailsenderService) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -32,7 +35,11 @@ export class ServicesComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    this.modalRef = this.modalService.show(this.SavePopup);
+    this.emailsenderService.sendEmail(this.registerForm.value.Name, this.registerForm.value.Email, this.registerForm.value.Message, this.registerForm.value.mobileNumber).subscribe(res => {
+      this.modalRef = this.modalService.show(this.SavePopup);
+    }, error => {
+      console.log('AppComponent Error', error);
+    });
   }
 
 }
