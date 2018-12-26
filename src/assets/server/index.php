@@ -35,7 +35,7 @@ $data = array(); 		// array to pass back data
         $mail->From = $postdata->email;
         $mail->FromName = $postdata->name;
 		$mail->Subject = "Enquiry for you from Cadd Website" . $postdata->name . ", e-mail: " .$postdata->email. "";
-		$mail->Body = "Student Mobile No: " . $postdata->mobileno . "Student Mail Id: " .$postdata->email. "Student Message: " .$postdata->message."";
+		$mail->Body = "Student Mobile No: " . $postdata->mobileno . " Student Mail Id: " .$postdata->email. " Student Message: " .$postdata->message."";
 		$mail->AddAddress("training@caddventures.com", 'CADD VENTURES'); //Pass the e-mail that you setup
 		 if(!$mail->Send()) {
 				echo "Mailer Error: " . $mail->ErrorInfo;
