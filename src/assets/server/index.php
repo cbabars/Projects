@@ -1,6 +1,7 @@
 <?php
-require_once (".:/usr/lib/php:/usr/local/lib/php");
-require_once ("PHPMailer\class.phpmailer.php");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+require_once('class.phpmailer.php');
 $errors = array();  	// array to hold validation errors
 $data = array(); 		// array to pass back data
 // validate the variables ======================================================

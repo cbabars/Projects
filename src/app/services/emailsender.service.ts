@@ -16,7 +16,7 @@ export class EmailsenderService {
   }
 
   sendEmail(name, email, message) {
-    return this.http.post('assets/server/index.php',{ name, email, message})
+    return this.http.post('assets/server/index.php',{ name: name, email: email, message: message})
       .map(response => response.json());
   }
 
