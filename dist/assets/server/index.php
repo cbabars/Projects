@@ -1,11 +1,13 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-require_once('PHPMailer.php');
-require_once('Exception.php');
-require_once('OAuth.php');
-require_once('POP3.php');
-require_once('SMTP.php');
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'Exception.php';
+require 'PHPMailer.php';
+require 'SMTP.php';
+
 $errors = array();  	// array to hold validation errors
 $data = array(); 		// array to pass back data
 	$request = file_get_contents("php://input");
@@ -27,14 +29,12 @@ $data = array(); 		// array to pass back data
 		
 	} else {
 		$mail = new PHPMailer(); // create a new object
-		$mail->IsSMTP(); // enable SMTP
-		$mail->SMTPAuth = true; // authentication enabled
-		// $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for GMail
+		$mail->Mailer = "smtp";
 		$mail->Host = "localhost";
-		$mail->Port = 25; // or 587
-		$mail->IsHTML(true);
-		$mail->Username = "fpnukaek"; //Email that you setup
-        $mail->Password = "ne9w):93DTXI7t"; // Password
+		$mail->Port = 25;
+		$mail->SMTPAuth = true;
+		$mail->Username = "fpnukaek"; // Put your FTP username between the quotes
+		$mail->Password = "ne9w):93DTXI7t"; // Put your FTP password between the quotes
         $mail->From = $postdata->email;
         $mail->FromName = $postdata->name;
 		$mail->Subject = "Y-Web Contact mail from " . $postdata->name . ", e-mail: " .$postdata->email. "";

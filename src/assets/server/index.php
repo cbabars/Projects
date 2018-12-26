@@ -1,36 +1,47 @@
 <?php
-header('Content-type: application/json');
-$errors = '';
-if(empty($errors))
-{
-	$postdata = file_get_contents("php://input");
-	$request = json_decode($postdata);
-	$from_email = $request->email;
-	$message = $request->message;
-	$from_name = $request->name;
-	$to_email = $from_email;
-	$contact = "<p><strong>Name:</strong> $from_name</p>
-							<p><strong>Email:</strong> $from_email</p>";
-	$content = "<p>$message</p>";
-	$website = 'Angular Php Email Example';
-	$email_subject = "$website: Neue Nachricht von $from_name erhalten";
-	$email_body = '<html><body>';
-	$email_body .= "$contact $content";
-	$email_body .= '</body></html>';
-	$headers .= "MIME-Version: 1.0\r\n";
-	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-	$headers .= "From: $from_email\n";
-	$headers .= "Reply-To: $from_email";
-	mail('training@caddventures.com',$email_subject,$email_body,$headers);
-	$response_array['status'] = 'success';
-	$response_array['from'] = $from_email;
-	echo json_encode($response_array);
-	echo json_encode($from_email);
-	header($response_array);
-	return $from_email;
-} else {
-	$response_array['status'] = 'error';
-	echo json_encode($response_array);
-	header('Location: /error.html');
-}
-?>
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+
+require("class.phpmailer.php");
+
+$errors = array();  	// array to hold validation errors
+$data = array(); 		// array to pass back data
+	$request = file_get_contents("php://input");
+	$postdata = json_decode($request);
+// validate the variables ======================================================
+	if (empty($postdata->name))
+		$errors['name'] = 'Name is required.';
+	if (empty($postdata->email))
+		$errors['email'] = 'E-mail is required.';
+	if (empty($postdata->mobileno))
+		$errors['message'] = 'mobile no is required.';
+// return a response ===========================================================
+	// response if there are errors
+	if ( ! empty($errors)) {
+		// if there are items in our errors array, return those errors
+		$data['data'] = $postdata;
+		$data['success'] = false;
+		$data['errors']  = $errors;
+		
+	} else {
+		$mail = new PHPMailer(); // create a new object
+		$mail->Mailer = "smtp";
+		$mail->Host = "localhost";
+		$mail->Port = 25;
+		$mail->IsHTML(true);
+		$mail->SMTPAuth = true;
+		$mail->Username = "fpnukaek"; // Put your FTP username between the quotes
+		$mail->Password = "ne9w):93DTXI7t"; // Put your FTP password between the quotes
+        $mail->From = $postdata->email;
+        $mail->FromName = $postdata->name;
+		$mail->Subject = "Enquiry for you from Cadd Website" . $postdata->name . ", e-mail: " .$postdata->email. "";
+		$mail->Body = "Student Mobile No: " . $postdata->mobileno . "Student Mail Id: " .$postdata->email. "Student Message: " .$postdata->message."";
+		$mail->AddAddress("training@caddventures.com", 'CADD VENTURES'); //Pass the e-mail that you setup
+		 if(!$mail->Send()) {
+				echo "Mailer Error: " . $mail->ErrorInfo;
+		} else {
+			$data['success'] = true;
+			$data['message'] = 'Thank you for sending e-mail.';
+		}
+	}
+	echo json_encode($data);
