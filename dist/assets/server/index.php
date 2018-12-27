@@ -1,47 +1,36 @@
 <?php
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-
-require("class.phpmailer.php");
-
-$errors = array();  	// array to hold validation errors
-$data = array(); 		// array to pass back data
-	$request = file_get_contents("php://input");
-	$postdata = json_decode($request);
-// validate the variables ======================================================
-	if (empty($postdata->name))
-		$errors['name'] = 'Name is required.';
-	if (empty($postdata->email))
-		$errors['email'] = 'E-mail is required.';
-	if (empty($postdata->mobileno))
-		$errors['message'] = 'mobile no is required.';
-// return a response ===========================================================
-	// response if there are errors
-	if ( ! empty($errors)) {
-		// if there are items in our errors array, return those errors
-		$data['data'] = $postdata;
-		$data['success'] = false;
-		$data['errors']  = $errors;
-		
-	} else {
-		$mail = new PHPMailer(); // create a new object
-		$mail->Mailer = "smtp";
-		$mail->Host = "localhost";
-		$mail->Port = 25;
-		$mail->IsHTML(true);
-		$mail->SMTPAuth = true;
-		$mail->Username = "fpnukaek"; // Put your FTP username between the quotes
-		$mail->Password = "ne9w):93DTXI7t"; // Put your FTP password between the quotes
-        $mail->From = $postdata->email;
-        $mail->FromName = $postdata->name;
-		$mail->Subject = "Enquiry for you from Cadd Website" . $postdata->name . ", e-mail: " .$postdata->email. "";
-		$mail->Body = "Student Mobile No: " . $postdata->mobileno . "Student Mail Id: " .$postdata->email. "Student Message: " .$postdata->message."";
-		$mail->AddAddress("training@caddventures.com", 'CADD VENTURES'); //Pass the e-mail that you setup
-		 if(!$mail->Send()) {
-				echo "Mailer Error: " . $mail->ErrorInfo;
-		} else {
-			$data['success'] = true;
-			$data['message'] = 'Thank you for sending e-mail.';
-		}
-	}
-	echo json_encode($data);
+header('Content-type: application/json');
+$errors = '';
+if(empty($errors))
+{
+	$postdata = file_get_contents("php://input");
+	$request = json_decode($postdata);
+	$from_email = $request->email;
+	$message = $request->message;
+	$from_name = $request->name;
+	$from_mobile = $request->mobileno;
+	$to_email = "CADD VENTURES<training@caddventures.com>";
+	$content = "<p><strong>Hello</strong></p>
+				 <p><strong>Student Enquiry Details</strong></p>
+					<p><strong>Name:</strong> $from_name</p>
+						<p><strong>Email Address:</strong> $from_email</p>
+							<p><strong>Mobile No:</strong> $from_mobile</p>
+								<p><strong>Message:</strong> $message</p>
+									<p><strong>Thank you</strong></p>";
+	$email_subject = "Enquiry for you from Cadd Website";
+	$email_body = '<html><body>';
+	$email_body .= "$content";
+	$email_body .= '</body></html>';
+	$headers .= "MIME-Version: 1.0\r\n";
+	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+	$headers .= "From: $from_name < $from_email > \n";
+	$headers .= "Reply-To: $from_email";
+	mail($to_email,$email_subject,$email_body,$headers);
+	$response_array['status'] = 'success';
+	$response_array['from'] = $from_email;
+	echo json_encode($response_array);
+} else {
+	$response_array['status'] = 'error';
+	echo json_encode($response_array);
+}
+?>
