@@ -12,4 +12,16 @@ a:hover {
   border-color:red;
 }
 
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+ul.about_star li:before {
+  content: "\f005";
+  margin: 0 1em;    /* any design */
+  font-family: FontAwesome;
+  color: #007bff;
+}
+
 /* end of the other css */

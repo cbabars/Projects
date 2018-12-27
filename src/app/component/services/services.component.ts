@@ -37,6 +37,7 @@ export class ServicesComponent implements OnInit {
     this.submitted = true;
     this.emailsenderService.sendEmail(this.registerForm.value.Name, this.registerForm.value.Email, this.registerForm.value.Message, this.registerForm.value.mobileNumber).subscribe(res => {
       this.modalRef = this.modalService.show(this.SavePopup);
+      this.registerForm.reset();
     }, error => {
       console.log('AppComponent Error', error);
     });
