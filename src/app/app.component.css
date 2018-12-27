@@ -11,12 +11,12 @@
   
   @media (min-width: 992px) {
     header {
-        padding: 56px 0 0px;
+        padding: 56px 0 10px;
     }
   }
   
   section {
-    padding-top: 200px;
+    padding: 56px 0 10px;
   }
   
 /* end of the section */
