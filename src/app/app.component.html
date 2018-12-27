@@ -64,21 +64,19 @@
 </section>
 
 <!-- Footer -->
-<section>
-  <footer class="py-4 bg-primary">
-    <div class="col">
-      <a class="m-0 text-white" (click)="scroll(home)" href="javascript:void(0)">Home | </a>
-      <a class="m-0 text-white" (click)="scroll(services)" href="javascript:void(0)">Services | </a>
-      <a class="m-0 text-white" (click)="scroll(about)" href="javascript:void(0)">About Us | </a>
-      <a class="m-0 text-white" (click)="scroll(gallery)" href="javascript:void(0)">Gallery | </a>
-      <a class="m-0 text-white" (click)="scroll(contact)" href="javascript:void(0)">Contact Us</a>
-    </div>
-    <div class="col">
-      <p class="m-0 text-center text-white">&copy; Copyright 2018-2019.cadd.ventures All Rights Reserved.</p>
-    </div>
-  </footer>
-</section>
-
+<footer class="py-4 bg-primary">
+  <div class="col">
+    <a class="m-0 text-white" (click)="scroll(home)" href="javascript:void(0)">Home | </a>
+    <a class="m-0 text-white" (click)="scroll(services)" href="javascript:void(0)">Services | </a>
+    <a class="m-0 text-white" (click)="scroll(about)" href="javascript:void(0)">About Us | </a>
+    <a class="m-0 text-white" (click)="scroll(gallery)" href="javascript:void(0)">Gallery | </a>
+    <a class="m-0 text-white" (click)="scroll(contact)" href="javascript:void(0)">Contact Us</a>
+  </div>
+  <div class="col">
+    <p class="m-0 text-center text-white">&copy; Copyright 2018-2019.cadd.ventures All Rights Reserved.</p>
+  </div>
+</footer>
+<!-- fixed button -->
 <a class="contact-button" href="tel:+918007487185">
   <i class="fa fa-headphones phoneSetting" style="color: white;"></i>
   <div class="text-left" style="margin: 5px 0px 5px 60px;">Contact Us
@@ -86,7 +84,13 @@
     <a title="Call Now" href="tel:+918007487185">+91 8007487185</a>
   </div>
 </a>
-<a title="Whatsapp" href="https://api.whatsapp.com/send?phone=918007487185&forceIntent=true&load=loadInIOSExternalSafari"
+
+<a title="What's App" href="https://api.whatsapp.com/send?phone=918007487185&forceIntent=true&load=loadInIOSExternalSafari"
   target="_blank" class="whatsup-button">
   <i class="fa fa-whatsapp fa-3x"></i>
 </a>
+
+<go-top-button title="Go To Top" [animate]="true" [speed]="50" [acceleration]="2" [scrollDistance]="500" [classNames]="'gototop btn btn-primary'">
+  <i class='fa fa-chevron-up'></i>
+</go-top-button>
+<!-- end of the fixed button -->
