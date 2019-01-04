@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { ScrollToService } from 'ng2-scroll-to-el';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class AppComponent {
   title = 'CADD-Ventures';
 
-  constructor() { }
+  constructor(private scrollService: ScrollToService) { }
 
-  scroll(el) {
-    el.scrollIntoView({ behavior: "smooth" });
+  scrollToTop(element) {
+    this.scrollService.scrollTo(element);
   }
 
 }

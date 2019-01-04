@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from 'ngx-bootstrap';
 import { GoTopButtonModule } from 'ng2-go-top-button';
+import { ScrollToModule } from 'ng2-scroll-to-el';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
@@ -28,7 +29,8 @@ import { GalleryComponent } from './component/gallery/gallery.component';
     GoTopButtonModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    ScrollToModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
