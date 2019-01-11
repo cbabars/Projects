@@ -75,6 +75,7 @@
 }
 
 .label_class {
+  letter-spacing: 1px;
   text-align: center;
   line-height: 16px;
   margin-top: -5px;
