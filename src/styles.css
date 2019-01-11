@@ -1,3 +1,14 @@
+/* fonts */
+@font-face {
+  font-family: hotelGrand;
+  src: url(assets/fonts/GrandHotel-Regular.ttf);
+  font-weight: bold;
+}
+
+.responsive_size {
+  font-family: hotelGrand;
+}
+
 .carousel-caption {
   top: 0;
   bottom: 0px !important;
