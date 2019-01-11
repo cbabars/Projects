@@ -2,7 +2,6 @@
 @font-face {
   font-family: hotelGrand;
   src: url(assets/fonts/GrandHotel-Regular.ttf);
-  font-weight: bold;
 }
 
 .responsive_size {
