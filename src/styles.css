@@ -1,4 +1,10 @@
-
+.carousel-caption {
+  top: 0;
+  bottom: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* other css */
 textarea{
   resize: none!important;
