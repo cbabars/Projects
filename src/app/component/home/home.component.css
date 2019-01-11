@@ -4,12 +4,12 @@
 }
 
 h1.responsive_size {
-    font-size:5.5rem;
+    font-size:4rem;
 }
 
 @media screen and (max-width: 750px) {
     .responsive_size {
-        font-size:12vw!important;
+        font-size:8vw!important;
     }
   }
 
