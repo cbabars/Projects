@@ -1,3 +1,11 @@
 .panel_height {
     height: 100%;
 }
+.customePointer{
+ cursor: pointer;
+}
+.image_thumbnial {
+    padding: .25rem;
+    background-color: white;
+    border-radius: .25rem;
+}
