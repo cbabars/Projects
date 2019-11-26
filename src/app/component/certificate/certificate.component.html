@@ -1,7 +1,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top fixed-height" id="mainNav">
   <div class="container-fluid">
-    <img class="image_class" src="assets/background_image/Autodesk_Certified_User_Logo.jpg">
+    <img class="image_class1" src="assets/background_image/Autodesk_Certified_User_Logo.jpg">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -9,13 +9,13 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/'">Home</a>
+          <a class="nav-link" [routerLink]="['/home']">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/'">Services</a>
+          <a class="nav-link" [routerLink]="['/home']">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/'">About Us</a>
+          <a class="nav-link" [routerLink]="['/home']">About Us</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -23,14 +23,14 @@
             Certification
           </a>
           <div class="dropdown-menu drpBackground" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item text-white" [routerLink]="'/certificate'" target="_blank">Autodesk Certification</a>
+            <a class="dropdown-item text-white" [routerLink]="['/certificate']">Autodesk Certification</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/'">Gallery</a>
+          <a class="nav-link" [routerLink]="['/home']">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/'">Contact Us</a>
+          <a class="nav-link" [routerLink]="['/home']">Contact Us</a>
         </li>
       </ul>
     </div>
@@ -177,11 +177,11 @@
 <!-- Footer -->
 <footer class="py-4 bg-light">
   <div class="col">
-    <a class="m-0" [routerLink]="'/'">Home | </a>
-    <a class="m-0" [routerLink]="'/'">Services | </a>
-    <a class="m-0" [routerLink]="'/'">About Us | </a>
-    <a class="m-0" [routerLink]="'/'">Gallery | </a>
-    <a class="m-0" [routerLink]="'/'">Contact Us</a>
+    <a class="m-0" [routerLink]="['/home']">Home | </a>
+    <a class="m-0" [routerLink]="['/home']">Services | </a>
+    <a class="m-0" [routerLink]="['/home']">About Us | </a>
+    <a class="m-0" [routerLink]="['/home']">Gallery | </a>
+    <a class="m-0" [routerLink]="['/home']">Contact Us</a>
   </div>
   <div class="col">
     <p class="m-0 text-left">&copy; Copyright 2018-2019.cadd.ventures All Rights Reserved.</p>

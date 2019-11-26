@@ -4,7 +4,7 @@ import { LandingPageComponent } from './component/landing-page/landing-page.comp
 import { CertificateComponent } from './component/certificate/certificate.component';
 
 const routes: Routes = [{
-  path: '',
+  path: 'home',
   component: LandingPageComponent
 }, {
   path: 'certificate',
@@ -12,7 +12,7 @@ const routes: Routes = [{
 }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
