@@ -13,6 +13,10 @@ import { AboutComponent } from './component/about/about.component';
 import { ServicesComponent } from './component/services/services.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { GalleryComponent } from './component/gallery/gallery.component';
+import { LandingPageComponent } from './component/landing-page/landing-page.component';
+import { CertificateComponent } from './component/certificate/certificate.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +25,9 @@ import { GalleryComponent } from './component/gallery/gallery.component';
     AboutComponent,
     ServicesComponent,
     ContactComponent,
-    GalleryComponent
+    GalleryComponent,
+    LandingPageComponent,
+    CertificateComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,8 @@ import { GalleryComponent } from './component/gallery/gallery.component';
     NgxViewerModule,
     ReactiveFormsModule,
     ModalModule.forRoot(),
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

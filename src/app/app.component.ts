@@ -1,19 +1,13 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { ScrollToService } from 'ng2-scroll-to-el';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'CADD-Ventures';
 
-  constructor(private scrollService: ScrollToService) { }
+  constructor() { }
 
-  scrollToTop(element) {
-    this.scrollService.scrollTo(element);
-  }
 
 }

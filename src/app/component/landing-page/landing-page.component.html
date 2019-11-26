@@ -1,0 +1,90 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top fixed-height" id="mainNav">
+  <div class="container-fluid">
+    <img class="image_class" src="assets/background_image/logo.png">
+    <a class="label_class navbar-brand" href="javascript:void(0)"> <span class="isolabel_class">ISO 9001:2015 Certified</span><br/> CADD VENTURES</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToTop(home)" href="javascript:void(0)">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToTop(services)" href="javascript:void(0)">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToTop(about)" href="javascript:void(0)">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Certification
+          </a>
+          <div class="dropdown-menu drpBackground" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item text-white" [routerLink]="'/certificate'">Autodesk Certification</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToTop(gallery)" href="javascript:void(0)">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToTop(contact)" href="javascript:void(0)">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header #home>
+  <app-home></app-home>
+</header>
+
+<section #services>
+  <app-services></app-services>
+</section>
+
+<section #about>
+  <app-about></app-about>
+</section>
+
+<section #gallery>
+  <app-gallery></app-gallery>
+</section>
+
+<section #contact>
+  <app-contact></app-contact>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 bg-light">
+  <div class="col">
+    <a class="m-0" (click)="scrollToTop(home)" href="javascript:void(0)">Home | </a>
+    <a class="m-0" (click)="scrollToTop(services)" href="javascript:void(0)">Services | </a>
+    <a class="m-0" (click)="scrollToTop(about)" href="javascript:void(0)">About Us | </a>
+    <a class="m-0" (click)="scrollToTop(gallery)" href="javascript:void(0)">Gallery | </a>
+    <a class="m-0" (click)="scrollToTop(contact)" href="javascript:void(0)">Contact Us</a>
+  </div>
+  <div class="col">
+    <p class="m-0 text-left">&copy; Copyright 2018-2019.cadd.ventures All Rights Reserved.</p>
+  </div>
+</footer>
+<!-- fixed button -->
+<a class="contact-button" href="tel:+918007487185">
+  <i class="fa fa-headphones phoneSetting"></i>
+  <div class="text-left contact_label">Contact Us
+    <br>
+    <a title="Call Now" href="tel:+918007487185">+91 8007487185</a>
+  </div>
+</a>
+
+<a title="What's App" href="https://api.whatsapp.com/send?phone=917057586563&forceIntent=true&load=loadInIOSExternalSafari"
+  target="_blank" class="whatsup-button">
+  <i class="fa fa-whatsapp fa-3x"></i>
+</a>
+
+<go-top-button title="Go To Top" [animate]="true" [speed]="50" [acceleration]="2" [scrollDistance]="500" [classNames]="'gototop btn btn-primary'">
+  <i class='fa fa-chevron-up'></i>
+</go-top-button>
+<!-- end of the fixed button -->
