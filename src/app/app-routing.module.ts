@@ -9,6 +9,10 @@ const routes: Routes = [{
 }, {
   path: 'certificate',
   component: CertificateComponent
+},{ 
+  path: '**',
+  redirectTo: '/home',
+  pathMatch: 'full'
 }];
 
 @NgModule({
