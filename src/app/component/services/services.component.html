@@ -9,7 +9,8 @@
         <div class="text-center">
           <h5 class="card-title">MECHANICAL</h5>
         </div>
-        <p class="card-text">Under this section we are going to cover Mechanical engineering softwares as well as Production quality.</p>
+        <p class="card-text">Under this section we are going to cover Mechanical engineering softwares as well as
+          Production quality.</p>
         <div class="text-center">
           <button type="button" (click)="openModal(mechanical)" class="btn btn-primary">Enquire Now</button>
         </div>
@@ -21,7 +22,8 @@
         <div class="text-center">
           <h5 class="card-title">CIVIL</h5>
         </div>
-        <p class="card-text">Under this section we are going to cover all the softwares related to Architectural as well as Civil Engineering.</p>
+        <p class="card-text">Under this section we are going to cover all the softwares related to Architectural as
+          well as Civil Engineering.</p>
         <div class="text-center">
           <button type="button" (click)="openModal(civil)" class="btn btn-primary">Enquire Now</button>
         </div>
@@ -31,7 +33,7 @@
 </div>
 
 <ng-template #mechanical>
-  <div class="modal-header bg-primary text-white">
+  <div class="modal-header bg-light">
     <h5 class="modal-title pull-left">Send Enquiry</h5>
     <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="true">&times;</span>
@@ -142,52 +144,14 @@
         </div>
       </div>
     </div>
-    <div class="text-center m-2">
-      <b>What Are You Looking For?</b>
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="Checking">Mechanical CAD / CAM / CAE
-        </label>
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="Checking">Production & Quality Control
-        </label>
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="Checking">Professional in Machine Design
-        </label>
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="Checking">Project Management
-        </label>
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="Checking">Other
-        </label>
-      </div>
-    </div>
-    <div class="text-center">
-      <button type="button" (click)="modalRef.hide()" (click)="openModal(registerMechanical)" class="btn btn-primary">Next</button>
-    </div>
+  </div>
+  <div class="modal-footer text-center">
+    <button type="button" (click)="modalRef.hide()" (click)="openModal(registerMechanical)" class="btn btn-primary">Next</button>
   </div>
 </ng-template>
 
 <ng-template #civil>
-  <div class="modal-header bg-primary text-white">
+  <div class="modal-header bg-light">
     <h5 class="modal-title pull-left">Send Enquiry</h5>
     <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="true">&times;</span>
@@ -201,7 +165,7 @@
       <div class="col-6">
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="CivilCADCAMCAE">
-          <label class="form-check-label" for="CivilCADCAMCAE">Civil CAD /  CAM / CAE</label>
+          <label class="form-check-label" for="CivilCADCAMCAE">Civil CAD / CAM / CAE</label>
         </div>
       </div>
       <div class="col-6">
@@ -298,52 +262,14 @@
         </div>
       </div>
     </div>
-    <div class="text-center m-2">
-      <b>What Are You Looking For?</b>
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="Checking">Civil CAD / CAM / CAE
-        </label>
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="Checking">Building Information Modeling(BIM)
-        </label>
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="Checking">Structural Analysis & Design
-          </label>
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="Checking">Project Management
-        </label>
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="Checking">Other
-        </label>
-      </div>
-    </div>
-    <div class="text-center">
-      <button type="button" (click)="modalRef.hide()" (click)="openModal(registerCivil)" class="btn btn-primary">Next</button>
-    </div>
+  </div>
+  <div class="modal-footer text-center">
+    <button type="button" (click)="modalRef.hide()" (click)="openModal(registerCivil)" class="btn btn-primary">Next</button>
   </div>
 </ng-template>
 
 <ng-template #registerMechanical>
-  <div class="modal-header bg-primary text-white">
+  <div class="modal-header bg-light">
     <span class="mr-2" title="back" (click)="modalRef.hide()" (click)="openModal(mechanical)">
       <i class="fa fa-arrow-left"></i>
     </span>
@@ -357,22 +283,22 @@
       <div class="col-12">
         <div class="form-group">
           <label for="Name">Name *</label>
-          <input placeholder="Enter name" [ngClass]="{ 'error': submitted && f.Name.errors }" formControlName="Name" type="text" class="form-control"
-            id="Name" required>
+          <input placeholder="Enter name" [ngClass]="{ 'error': submitted && f.Name.errors }" formControlName="Name"
+            type="text" class="form-control" id="Name" required>
         </div>
       </div>
       <div class="col-12">
         <div class="form-group">
           <label for="mobileNo">Mobile Number *</label>
           <input placeholder="Enter mobile" [ngClass]="{ 'error': submitted && f.mobileNumber.errors }" formControlName="mobileNumber"
-          maxlength="10" type="number" class="form-control" id="mobileNo" required>
+            maxlength="10" type="number" class="form-control" id="mobileNo" required>
         </div>
       </div>
       <div class="col-12">
         <div class="form-group">
           <label for="email">Email *</label>
-          <input placeholder="Enter email" [ngClass]="{ 'error': submitted && f.Email.errors }" formControlName="Email" type="email"
-            class="form-control" id="email" required>
+          <input placeholder="Enter email" [ngClass]="{ 'error': submitted && f.Email.errors }" formControlName="Email"
+            type="email" class="form-control" id="email" required>
         </div>
       </div>
       <div class="col-12">
@@ -390,7 +316,7 @@
 </ng-template>
 
 <ng-template #registerCivil>
-  <div class="modal-header bg-primary text-white">
+  <div class="modal-header bg-light">
     <span class="mr-2" title="back" (click)="modalRef.hide()" (click)="openModal(civil)">
       <i class="fa fa-arrow-left"></i>
     </span>
@@ -404,22 +330,22 @@
       <div class="col-12">
         <div class="form-group">
           <label for="Name">Name *</label>
-          <input placeholder="Enter name" [ngClass]="{ 'error': submitted && f.Name.errors }" formControlName="Name" type="text" class="form-control"
-            id="Name" required>
+          <input placeholder="Enter name" [ngClass]="{ 'error': submitted && f.Name.errors }" formControlName="Name"
+            type="text" class="form-control" id="Name" required>
         </div>
       </div>
       <div class="col-12">
         <div class="form-group">
           <label for="mobileNo">Mobile Number *</label>
           <input placeholder="Enter mobile" [ngClass]="{ 'error': submitted && f.mobileNumber.errors }" formControlName="mobileNumber"
-          maxlength="10" type="number" class="form-control" id="mobileNo" required>
+            maxlength="10" type="number" class="form-control" id="mobileNo" required>
         </div>
       </div>
       <div class="col-12">
         <div class="form-group">
           <label for="email">Email *</label>
-          <input placeholder="Enter email" [ngClass]="{ 'error': submitted && f.Email.errors }" formControlName="Email" type="email"
-            class="form-control" id="email" required>
+          <input placeholder="Enter email" [ngClass]="{ 'error': submitted && f.Email.errors }" formControlName="Email"
+            type="email" class="form-control" id="email" required>
         </div>
       </div>
       <div class="col-12">
@@ -437,7 +363,7 @@
 </ng-template>
 
 <ng-template #SavePopup>
-  <div class="modal-header bg-primary text-white">
+  <div class="modal-header bg-light">
     <h5 class="modal-title pull-left">Enquiry Delivered</h5>
     <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="true">&times;</span>
